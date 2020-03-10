@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void decrypt(View view) {
         str = inputField.getText().toString();
+        str = str.replace(' ', '-');
         String out = "";
         char[] chars = str.toCharArray();
 
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 case 'X' : out += "U"; break;
                 case 'Y' : out += "V"; break;
                 case 'Z' : out += "W"; break;
+                case '-' : out += " "; break;
                 default : ;
             }
         }
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     public void encrypt(View view) {
 
         str = inputField.getText().toString();
+        str = str.replace(' ', '-');
         String out = "";
         char[] chars = str.toCharArray();
 
@@ -153,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 case 'X' : out += "A"; break;
                 case 'Y' : out += "B"; break;
                 case 'Z' : out += "C"; break;
+                case '-' : out += " "; break;
                 default : ;
             }
         }
